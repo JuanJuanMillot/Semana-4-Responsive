@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&family=Gluten:slnt,wght@1,100..900&family=Limelight&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --negro:rgb(28, 28, 30, 1);
+    --blanco:white; 
+}
+
+
+nav a{
+    color: var(--blanco);
+    font-weight: bold;
+    margin: 0 0.5em;
+    font-size: 1.1em;
+}   
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2{
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+header{
+    text-align: center;
+    background-color: var(--negro);
+    padding: 1em;
+}
+
+header img{
+    width: 120px;
+}
+
+a{
+    transition: 0.3s;
+}
+
+
+.contenedor{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1{
+    text-align: center;
+    color: var(--negro);
+    margin: 1em 0;
+}
+
+
+/* Consulto si estoy en tamano de TABLET */
+@media all and (min-width:768px){
+
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1em;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    #productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.2em;
+    }
+
+    #productos article{
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 300px;
+    }
+
+}
+
+#productos article{
+    padding: 1.2em;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(255, 91, 145);
+    margin-bottom: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;  /* PARA QUE EL BOTON NO OCUPE EL ANCHO DEL ARTICLEs */
+}
+
+#productos p{
+    line-height: 1.4em;
+}
+
+#productos a{
+    background-color: white;
+    color: var(--negro);
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+
+@media all and (min-width:1200px){
+
+    #productos article{
+        flex-basis: 250px;
+    }
+}
